@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 Freddy Beach Baseball - Team Values
+  .container
+    .row
+    - var i = 0;
+    for team in team_data
+      if i % 3 == 0
+        .row
+      .team.col-sm-4
+        .head.clearfix
+          h4.name #{team.name}
+          h4.value $#{team.value}
+        .players
+          .head.clearfix
+            .name Player
+            .cost Cost
+          for player in team.players
+            .player.clearfix
+              .name #{player.name}
+              .cost $#{player.cost}
+      - i++
+
+

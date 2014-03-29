@@ -1,0 +1,87 @@
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+body {
+  padding: 20px 50px 50px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.team .head,
+.players .head,
+.players .player {
+  display: block;
+}
+
+.team .head {
+  background: #2c3e50;
+  color: white;
+  padding: 5px 10px;
+}
+
+.players .head {
+  background: #c0392b;
+  font-weight: bold;
+}
+
+.team .head .name,
+.players .head .name,
+.players .player .name {
+  float: left;
+}
+
+.team .head .value,
+.players .head .cost,
+.players .player .cost {
+  float: right;
+}
+
+.team .players {
+  margin-bottom: 20px;
+}
+
+.team .players .player {
+  padding: 5px 10px;
+}
+
+@media print
+{
+  #header, #footer {
+    visibility: hidden !important;
+    display: none !important;
+  }
+
+  .team {
+    page-break-after:always
+  }
+
+  .team .players {
+    display: block;
+  }
+}
